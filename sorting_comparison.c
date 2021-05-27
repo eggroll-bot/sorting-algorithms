@@ -147,6 +147,12 @@ int main( int argc, char **argv ) {
 		return 1;
 	}
 
+	if ( array_length == 0 ) { //
+		fprintf( stderr, "Invalid array length.\n" );
+
+		return 1;
+	}
+
 	// Set max_to_print to the number of elements to print.
 	max_to_print = max_to_print < array_length ? max_to_print : array_length;
 
