@@ -2,6 +2,8 @@
 
 Contains various sorting algorithms with a program that can be used to test the sorts.
 
+Adapted from a Computer Systems and C Programming course assignment.
+
 ## How to build
 
 To build this program, run `make`.
