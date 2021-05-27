@@ -5,6 +5,8 @@
 
 #include <stdint.h>
 
+SortingStatistics quicksort_recursive( uint32_t *arr, uint32_t len );
+
 SortingStatistics quicksort_stack( uint32_t *arr, uint32_t len );
 
 SortingStatistics quicksort_queue( uint32_t *arr, uint32_t len );

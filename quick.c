@@ -63,7 +63,41 @@ static int64_t partition( uint32_t *arr, int64_t lo, int64_t hi, SortingStatisti
 	return j;
 }
 
-// TO-DO: Add recursive quicksort.
+// Description:
+// Helper function for recursive quicksort.
+//
+// Parameters:
+// uint32_t *arr - The array to sort.
+// uint32_t len - The length of the array to sort.
+// int64_t lo - Starting point.
+// int64_t hi - Ending point.
+// SortingStatistics *stats - A pointer to the SortingStatistics struct that holds the sorting statistics.
+//
+// Returns:
+// Nothing.
+static void quicksort_recursive_internal( uint32_t *arr, uint32_t len, int64_t lo, int64_t hi, SortingStatistics *stats ) {
+	if ( lo < hi ) {
+		int64_t p = partition( arr, lo, hi, stats );
+		quicksort_recursive_internal( arr, len, lo, p - 1, stats );
+		quicksort_recursive_internal( arr, len, p + 1, hi, stats );
+	}
+}
+
+// Description:
+// Uses quicksort to sort an array recursively.
+//
+// Parameters:
+// uint32_t *arr - The array to sort.
+// uint32_t len - The length of the array to sort.
+//
+// Returns:
+// SortingStatistics - The statistics for the sort.
+SortingStatistics quicksort_recursive( uint32_t *arr, uint32_t len ) {
+	SortingStatistics stats = sorting_statistics_create( len );
+	quicksort_recursive_internal( arr, len, 0, len - 1, &stats );
+
+	return stats;
+}
 
 // Description:
 // Uses quicksort to sort an array using a stack.
