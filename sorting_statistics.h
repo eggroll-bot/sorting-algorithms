@@ -6,9 +6,9 @@
 typedef struct SortingStatistics SortingStatistics;
 
 struct SortingStatistics {
-	uint32_t elements;
-	uint64_t moves;
-	uint64_t compares;
+	uint32_t elements; // Number of elements processed.
+	uint64_t moves; // Number of moves done by the sort.
+	uint64_t compares; // Number of compares done by the sort.
 };
 
 #endif
