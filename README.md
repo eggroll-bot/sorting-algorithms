@@ -15,9 +15,7 @@ The Makefile has the following targets:
 
 ## How to run
 
-To see the program usage text, run `./sorting` after building it.
-
-TO-DO: List CLI arguments for testing the sorts.
+To see the program usage text, run `./sorting_comparison` after building it.
 
 ## Known issues
 
