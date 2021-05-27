@@ -36,4 +36,6 @@ SortingStatistics shell_sort( uint32_t *arr, uint32_t len, uint32_t *gap_seq, ui
 			stats.moves += 2;
 		}
 	}
+
+	return stats;
 }
