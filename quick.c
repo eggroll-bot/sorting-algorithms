@@ -76,9 +76,13 @@ static int64_t partition( uint32_t *arr, int64_t lo, int64_t hi, SortingStatisti
 // Returns:
 // Nothing.
 static void quicksort_recursive_internal( uint32_t *arr, uint32_t len, int64_t lo, int64_t hi, SortingStatistics *stats ) {
-	if ( lo < hi ) {
-		int64_t p = partition( arr, lo, hi, stats );
-		quicksort_recursive_internal( arr, len, lo, p - 1, stats );
+	int64_t p = partition( arr, lo, hi, stats );
+
+	if ( lo < p ) {
+		quicksort_recursive_internal( arr, len, lo, p, stats );
+	}
+
+	if ( hi > p + 1 ) {
 		quicksort_recursive_internal( arr, len, p + 1, hi, stats );
 	}
 }
