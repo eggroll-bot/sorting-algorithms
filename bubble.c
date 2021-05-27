@@ -15,10 +15,7 @@
 // Returns:
 // SortingStatistics - The statistics for the sort.
 SortingStatistics bubble_sort( uint32_t *arr, uint32_t len ) {
-	SortingStatistics stats;
-	stats.elements = len;
-	stats.moves = 0;
-	stats.compares = 0;
+	SortingStatistics stats = sorting_statistics_create( len );
 	uint32_t pass_size = len;
 	bool swapped = true;
 
