@@ -11,4 +11,6 @@ struct SortingStatistics {
 	uint64_t compares; // Number of compares done by the sort.
 };
 
+SortingStatistics sorting_statistics_create( uint32_t elements );
+
 #endif
