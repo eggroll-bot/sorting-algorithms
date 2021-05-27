@@ -15,6 +15,7 @@ SortingStatistics sorting_statistics_create( uint32_t elements ) {
 	stats.elements = elements;
 	stats.moves = 0;
 	stats.compares = 0;
+	stats.max_ds_size = 0;
 
 	return stats;
 }
