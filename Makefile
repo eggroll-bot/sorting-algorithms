@@ -3,19 +3,23 @@ OBJECTFILES = bubble.o queue.o quick.o set.o shell.o sorting_comparison.o sortin
 OUTPUT = sorting_comparison
 
 CC = clang
-CFLAGS = -Wall -Wextra -Werror -Wpedantic
+CFLAGS = -Wall -Wextra -Werror -Wpedantic -Ofast
+LDFLAGS = -flto -Ofast
 
 .PHONY: all debug clean format
 
 all: $(OUTPUT)
 
 $(OUTPUT): $(OBJECTFILES)
-	$(CC) -o $(OUTPUT) $(OBJECTFILES)
+	$(CC) $(LDFLAGS) -o $(OUTPUT) $(OBJECTFILES)
 
 $(OBJECTFILES): $(SOURCEFILES)
 	$(CC) $(CFLAGS) -c $(SOURCEFILES)
 
 debug: CFLAGS += -g -O0
+debug: CFLAGS := $(filter-out -Ofast, $(CFLAGS))
+debug: LDFLAGS += -O0
+debug: LDFLAGS := $(filter-out -flto -Ofast, $(LDFLAGS))
 debug: all
 
 clean:
