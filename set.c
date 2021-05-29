@@ -1,6 +1,5 @@
 #include "set.h"
 
-#include <assert.h>
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -28,8 +27,6 @@ Set set_empty( ) {
 // Returns:
 // bool - Whether the value is a member of the set.
 bool set_member( Set s, uint8_t x ) {
-	assert( x <= SET_CAPACITY );
-
 	return s & ( 1 << x );
 }
 
@@ -43,7 +40,5 @@ bool set_member( Set s, uint8_t x ) {
 // Returns:
 // Set - A set with the value inserted.
 Set set_insert( Set s, uint8_t x ) {
-	assert( x <= SET_CAPACITY );
-
 	return s | ( 1 << x ); // Set bit for value to 1.
 }

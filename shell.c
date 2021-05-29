@@ -2,7 +2,6 @@
 
 #include "sorting_statistics.h"
 
-#include <assert.h>
 #include <stdint.h>
 #include <stdlib.h>
 
@@ -33,7 +32,6 @@ void shell_set_gap_sequence( const uint32_t *gs, uint32_t gs_len ) {
 // Returns:
 // SortingStatistics - The statistics for the sort.
 SortingStatistics shell_sort( uint32_t *arr, uint32_t len ) {
-	assert( gap_seq && gap_seq_len );
 	SortingStatistics stats = sorting_statistics_create( len );
 
 	for ( uint32_t gap_index = 0; gap_index < gap_seq_len; gap_index++ ) {
