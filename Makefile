@@ -5,7 +5,7 @@ OUTPUT = sorting_comparison
 CC = clang
 CFLAGS = -Wall -Wextra -Werror -Wpedantic
 
-.PHONY: all debug clean format scan-build
+.PHONY: all debug clean format
 
 all: $(OUTPUT)
 
