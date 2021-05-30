@@ -12,8 +12,8 @@
 
 #define DEFAULT_ARRAY_LENGTH 100 // The number of array elements to generate.
 #define DEFAULT_MAX_TO_PRINT 100 // The max number of elements to print.
-#define DEFAULT_RANDOM_SEED	 1000 // The default random seed for generating array elements.
-#define OPTIONS				 "habsSqtQn:p:r:" // Valid options for the program.
+#define DEFAULT_RANDOM_SEED  1000 // The default random seed for generating array elements.
+#define OPTIONS              "habsSqtQn:p:r:" // Valid options for the program.
 
 // An enum for sort flags.
 typedef enum { F_ALL, F_BUBBLE, F_SHELL_CIURA, F_SHELL_PRATT, F_QUICK_RECURSIVE, F_QUICK_STACK, F_QUICK_QUEUE } flags;
@@ -46,12 +46,12 @@ static void generate_random_array( uint32_t *arr, uint32_t seed, uint32_t length
 // Nothing.
 static void print_help( char *program_path ) {
 	fprintf( stderr,
-		"SYNOPSIS\n   Compares sorting algorithms against each other. Uses a random\n   seed to generate elements to sort.\n\nUSAGE\n   %s [-habsSqtQ] [-n length] [-p elements] [-r "
-		"seed]\n\nOPTIONS\n   -h              Prints the help text.\n   -a              Enables all sorts.\n   -b              Enables bubble sort.\n   -s              Enables shell sort (Ciura gap "
-		"sequence).\n   -S              Enables shell sort (Pratt gap sequence).\n   -q              Enables quicksort (recursive).\n   -t              Enables quicksort (stack).\n   -Q              "
-		"Enables quicksort (queue).\n   -n length       Number of array elements to generate.\n   -p elements     Number of total elements to print.\n   -r seed         Random seed used to generate "
-		"array elements.\n",
-		program_path );
+	    "SYNOPSIS\n   Compares sorting algorithms against each other. Uses a random\n   seed to generate elements to sort.\n\nUSAGE\n   %s [-habsSqtQ] [-n length] [-p elements] [-r "
+	    "seed]\n\nOPTIONS\n   -h              Prints the help text.\n   -a              Enables all sorts.\n   -b              Enables bubble sort.\n   -s              Enables shell sort (Ciura gap "
+	    "sequence).\n   -S              Enables shell sort (Pratt gap sequence).\n   -q              Enables quicksort (recursive).\n   -t              Enables quicksort (stack).\n   -Q              "
+	    "Enables quicksort (queue).\n   -n length       Number of array elements to generate.\n   -p elements     Number of total elements to print.\n   -r seed         Random seed used to generate "
+	    "array elements.\n",
+	    program_path );
 }
 
 // Description:
