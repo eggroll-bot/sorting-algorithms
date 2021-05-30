@@ -9,7 +9,6 @@
 #include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 #define DEFAULT_ARRAY_LENGTH 100 // The number of array elements to generate.
 #define DEFAULT_MAX_TO_PRINT 100 // The max number of elements to print.
